@@ -1,0 +1,1199 @@
+/* =========================================
+   VOTERCONNECT - MAIN STYLESHEET
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --navy: #102a43;
+    --blue: #1565d8;
+    --blue-dark: #0d47a1;
+    --sky: #eaf3ff;
+
+    --text: #172b4d;
+    --muted: #62748a;
+
+    --line: #dce6f2;
+    --white: #ffffff;
+    --soft: #f6f9fc;
+
+    --green: #16845b;
+
+    --shadow:
+        0 18px 45px rgba(20, 55, 90, 0.10);
+}
+
+
+/* =========================================
+   BASIC SETTINGS
+   ========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--text);
+    background: var(--white);
+
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: auto;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    backdrop-filter: blur(14px);
+
+    border-bottom:
+        1px solid rgba(220, 230, 242, 0.8);
+}
+
+
+.navbar {
+    min-height: 74px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 1.2rem;
+
+    font-weight: 800;
+}
+
+
+.brand > span:last-child > span {
+    color: var(--blue);
+}
+
+
+.brand-icon {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 11px;
+
+    background: var(--sky);
+
+    font-size: 1.2rem;
+}
+
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+
+    font-size: 0.94rem;
+
+    font-weight: 650;
+
+    color: #52657d;
+}
+
+
+.nav-links a {
+    transition: 0.2s ease;
+}
+
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+
+/* Official Help button */
+
+.nav-cta {
+    background: var(--navy);
+
+    color: white !important;
+
+    padding: 10px 16px;
+
+    border-radius: 10px;
+}
+
+
+.nav-cta:hover {
+    background: var(--blue);
+}
+
+
+/* Mobile menu button */
+
+.menu-toggle {
+    display: none;
+
+    border: 0;
+
+    background: transparent;
+
+    font-size: 1.7rem;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+.hero {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 92px 0 85px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f9ff 0%,
+            #ffffff 65%
+        );
+}
+
+
+.hero-glow {
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    right: -190px;
+    top: -160px;
+
+    background: #dbeaff;
+
+    border-radius: 50%;
+
+    filter: blur(4px);
+
+    opacity: 0.65;
+}
+
+
+.hero-grid {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 0.8fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Small heading */
+
+.eyebrow {
+    display: inline-block;
+
+    color: var(--blue);
+
+    font-size: 0.76rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+
+    margin-bottom: 12px;
+}
+
+
+/* Main heading */
+
+.hero h1 {
+    font-size:
+        clamp(2.7rem, 6vw, 5rem);
+
+    line-height: 1.03;
+
+    letter-spacing: -0.05em;
+
+    max-width: 720px;
+}
+
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+
+.hero-text {
+    color: var(--muted);
+
+    font-size: 1.08rem;
+
+    max-width: 650px;
+
+    margin: 24px 0;
+}
+
+
+/* Hero buttons */
+
+.hero-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 0 20px;
+
+    border-radius: 11px;
+
+    font-weight: 750;
+
+    border: 1px solid transparent;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.btn-primary {
+    background: var(--blue);
+
+    color: white;
+}
+
+
+.btn-primary:hover {
+    background: var(--blue-dark);
+
+    transform: translateY(-2px);
+}
+
+
+.btn-secondary {
+    background: white;
+
+    color: var(--navy);
+
+    border-color: var(--line);
+}
+
+
+.btn-secondary:hover {
+    border-color: var(--blue);
+
+    color: var(--blue);
+}
+
+
+.verification-note {
+    color: var(--green);
+
+    font-size: 0.82rem;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   QR CARD
+   ========================================= */
+
+.qr-card {
+    background: white;
+
+    border: 1px solid var(--line);
+
+    border-radius: 24px;
+
+    padding: 24px;
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+
+    max-width: 350px;
+
+    justify-self: end;
+}
+
+
+.qr-top {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    color: #65778d;
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+}
+
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    margin-top: 5px;
+
+    border-radius: 50%;
+
+    background: #2bb673;
+}
+
+
+/* Real QR Code */
+
+.qr-placeholder {
+    width: 220px;
+    height: 220px;
+
+    margin: 22px auto;
+
+    display: grid;
+
+    place-items: center;
+
+    background: white;
+
+    border: 9px solid white;
+
+    box-shadow:
+        inset 0 0 0 1px #d8e0ea;
+
+    border-radius: 4px;
+
+    overflow: hidden;
+}
+
+
+.qr-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+.qr-card h3 {
+    font-size: 1.05rem;
+}
+
+
+.qr-card p {
+    color: var(--muted);
+
+    font-size: 0.82rem;
+
+    margin-top: 6px;
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+   ========================================= */
+
+.section {
+    padding: 90px 0;
+}
+
+
+.section-soft {
+    background: var(--soft);
+}
+
+
+.section-heading {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin:
+        0 auto 42px;
+}
+
+
+.section-heading h2,
+.two-column h2,
+.help-box h2 {
+    font-size:
+        clamp(2rem, 4vw, 3rem);
+
+    letter-spacing: -0.04em;
+
+    line-height: 1.1;
+}
+
+
+.section-heading p,
+.lead {
+    color: var(--muted);
+
+    margin-top: 12px;
+}
+
+
+/* =========================================
+   SEARCH BOX
+   ========================================= */
+
+.search-box {
+    max-width: 700px;
+
+    margin:
+        0 auto 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: white;
+
+    border: 1px solid var(--line);
+
+    border-radius: 13px;
+
+    padding: 0 16px;
+
+    box-shadow:
+        0 7px 20px rgba(20, 55, 90, 0.05);
+}
+
+
+.search-box span {
+    font-size: 1.6rem;
+
+    color: #8090a5;
+}
+
+
+.search-box input {
+    width: 100%;
+
+    border: 0;
+
+    outline: 0;
+
+    padding: 15px 0;
+
+    font-size: 1rem;
+}
+
+
+/* =========================================
+   INFORMATION CARDS
+   ========================================= */
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.info-card,
+.safety-card {
+    background: white;
+
+    border: 1px solid var(--line);
+
+    border-radius: 17px;
+
+    padding: 25px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.info-card:hover,
+.safety-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow);
+}
+
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: var(--sky);
+
+    border-radius: 13px;
+
+    font-size: 1.35rem;
+
+    margin-bottom: 18px;
+}
+
+
+.info-card h3,
+.safety-card h3 {
+    margin-bottom: 8px;
+}
+
+
+.info-card p,
+.safety-card p {
+    color: var(--muted);
+
+    font-size: 0.92rem;
+}
+
+
+.text-link {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    color: var(--blue);
+
+    font-weight: 750;
+
+    font-size: 0.9rem;
+}
+
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+.no-results {
+    text-align: center;
+
+    color: var(--muted);
+}
+
+
+/* =========================================
+   HOW TO USE SECTION
+   ========================================= */
+
+.two-column {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 60px;
+
+    align-items: start;
+}
+
+
+.steps {
+    margin-top: 30px;
+
+    display: grid;
+
+    gap: 20px;
+}
+
+
+.step {
+    display: flex;
+
+    gap: 17px;
+}
+
+
+.step > span {
+    min-width: 40px;
+    height: 40px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: var(--navy);
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 0.76rem;
+
+    font-weight: 800;
+}
+
+
+.step h3 {
+    margin-bottom: 3px;
+}
+
+
+.step p {
+    color: var(--muted);
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   VOTING GUIDE
+   ========================================= */
+
+.vote-guide {
+    background: white;
+
+    border: 1px solid var(--line);
+
+    border-radius: 20px;
+
+    padding: 26px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.guide-header {
+    font-weight: 800;
+
+    padding-bottom: 18px;
+
+    border-bottom:
+        1px solid var(--line);
+}
+
+
+.vote-guide ol {
+    list-style: none;
+
+    padding: 10px 0;
+}
+
+
+.vote-guide li {
+    display: flex;
+
+    gap: 14px;
+
+    padding: 15px 0;
+}
+
+
+.vote-guide li > span {
+    min-width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background: var(--sky);
+
+    color: var(--blue);
+
+    display: grid;
+
+    place-items: center;
+
+    font-weight: 800;
+
+    font-size: 0.8rem;
+}
+
+
+.vote-guide small {
+    display: block;
+
+    color: var(--muted);
+
+    margin-top: 3px;
+}
+
+
+.notice {
+    background: #fff8e6;
+
+    color: #755a16;
+
+    border-radius: 10px;
+
+    padding: 12px;
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================================
+   SAFETY SECTION
+   ========================================= */
+
+.safety-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.safety-card > span {
+    font-size: 1.6rem;
+
+    display: block;
+
+    margin-bottom: 16px;
+}
+
+
+/* =========================================
+   FAQ
+   ========================================= */
+
+.narrow {
+    max-width: 800px;
+}
+
+
+.faq-list {
+    display: grid;
+
+    gap: 12px;
+}
+
+
+details {
+    background: white;
+
+    border: 1px solid var(--line);
+
+    border-radius: 12px;
+
+    padding: 18px 20px;
+}
+
+
+summary {
+    cursor: pointer;
+
+    font-weight: 750;
+}
+
+
+details p {
+    color: var(--muted);
+
+    margin-top: 12px;
+
+    font-size: 0.92rem;
+}
+
+
+/* =========================================
+   OFFICIAL HELP
+   ========================================= */
+
+.help-section {
+    padding-top: 70px;
+}
+
+
+.help-box {
+    background: var(--navy);
+
+    color: white;
+
+    border-radius: 24px;
+
+    padding: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+.help-box .eyebrow {
+    color: #8ec4ff;
+}
+
+
+.help-box p {
+    color: #c7d5e5;
+
+    max-width: 650px;
+
+    margin-top: 10px;
+}
+
+
+.btn-light {
+    background: white;
+
+    color: var(--navy);
+
+    white-space: nowrap;
+}
+
+
+.btn-light:hover {
+    background: #eaf3ff;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    background: #091c2f;
+
+    color: white;
+
+    padding: 30px 0;
+}
+
+
+.footer-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    align-items: center;
+}
+
+
+.footer-content p,
+.footer-note {
+    color: #9db0c4;
+
+    font-size: 0.82rem;
+}
+
+
+/* =========================================
+   TOAST MESSAGE
+   ========================================= */
+
+.toast {
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 25px;
+
+    transform:
+        translate(-50%, 20px);
+
+    background: var(--navy);
+
+    color: white;
+
+    padding: 13px 18px;
+
+    border-radius: 10px;
+
+    box-shadow: var(--shadow);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.25s;
+
+    z-index: 200;
+
+    max-width: min(90%, 500px);
+
+    text-align: center;
+
+    font-size: 0.9rem;
+}
+
+
+.toast.show {
+    opacity: 1;
+
+    transform:
+        translate(-50%, 0);
+}
+
+
+/* =========================================
+   BACK TO TOP BUTTON
+   ========================================= */
+
+.top-btn {
+    position: fixed;
+
+    right: 22px;
+
+    bottom: 22px;
+
+    width: 44px;
+    height: 44px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+
+    color: white;
+
+    font-size: 1.2rem;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.2s;
+}
+
+
+.top-btn.show {
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+
+.top-btn:hover {
+    background: var(--blue-dark);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .hero-grid,
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
+
+    .qr-card {
+        justify-self: center;
+    }
+
+
+    .info-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .safety-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* Mobile Navigation */
+
+    .nav-links {
+        position: absolute;
+
+        top: 74px;
+
+        left: 0;
+        right: 0;
+
+        background: white;
+
+        display: none;
+
+        padding: 20px 4%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        border-bottom:
+            1px solid var(--line);
+    }
+
+
+    .nav-links.open {
+        display: flex;
+    }
+
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 65px 0;
+    }
+
+
+    .section {
+        padding: 65px 0;
+    }
+
+
+    .info-grid,
+    .safety-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero-actions,
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+
+    .help-box,
+    .footer-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .help-box {
+        padding: 30px;
+    }
+
+
+    /* Mobile QR code */
+
+    .qr-placeholder {
+        width: 190px;
+        height: 190px;
+    }
+
+
+    .qr-image {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .hero h1 {
+        font-size: 2.7rem;
+    }
+
+
+    .section-heading h2 {
+        font-size: 2.2rem;
+    }
+
+
+    .footer-note {
+        margin-top: 5px;
+    }
+
+}
