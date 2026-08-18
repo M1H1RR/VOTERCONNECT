@@ -1195,5 +1195,10 @@ footer {
     .footer-note {
         margin-top: 5px;
     }
-
+    .qr-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
 }
